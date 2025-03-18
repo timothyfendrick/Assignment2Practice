@@ -1,0 +1,3 @@
+C:/Users/timot/1820-CS/Assignment2Practice/cmake-build-debug/CMakeFiles/Assignment2Practice.dir
+C:/Users/timot/1820-CS/Assignment2Practice/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/timot/1820-CS/Assignment2Practice/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,10 @@
 # ninja log v6
 440	481	1741367656539742188	untitled5	ebc081f1f2bb7df0
 662	849	7639872443281445	untitled5.exe	f994782c417688dd
+149	765	7640995052657659	CMakeFiles/Assignment2Practice.dir/BorderImage.cpp.obj	762af4ace922575b
+30	792	7640995051467886	CMakeFiles/Assignment2Practice.dir/main.cpp.obj	ca16837f74e29d09
+183	839	7640995052993136	CMakeFiles/Assignment2Practice.dir/LineDetectedImage.cpp.obj	ca78d9d3a26e7527
+125	888	7640995052409728	CMakeFiles/Assignment2Practice.dir/SimpleImage.cpp.obj	b8db71bf8632213c
+888	1128	7640995060045985	Assignment2Practice.exe	fc8c743162a609d3
+10	676	7640996149588747	CMakeFiles/Assignment2Practice.dir/main.cpp.obj	ca16837f74e29d09
+676	892	7640996156256253	Assignment2Practice.exe	fc8c743162a609d3

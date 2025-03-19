@@ -12,22 +12,39 @@ void redImage(string sourceBmpFilePath, string destinationBmpFilePath);
 int main()
 {
 
-    string originalImageFilePath = "bmp-example-file-download-500x500.bmp";
 
-    string resultFilePath = "result.bmp";
+    //TEST 1
+    {
+        string originalImageFilePath = "test1RGBTri.bmp";
 
-    string copyFilePath = "copy.bmp";
+        string resultFilePath = "test1RGBTri-AddBorder.bmp";
 
-    SimpleImage originalImage(originalImageFilePath);
-    SimpleImage resultImage(1,1);
-    SimpleImage copyImage = originalImage;
+        SimpleImage originalImage(originalImageFilePath);
+        SimpleImage resultImage(1,1);
 
-    BorderedImage borderImage(100, RGB {0,0,0});
+        BorderedImage borderImage(10, RGB {0,0,0});
 
-    resultImage = borderImage.addBorder(originalImage);
+        resultImage = borderImage.addBorder(originalImage);
 
-    resultImage.writeBMPFile(resultFilePath);
-    copyImage.writeBMPFile(copyFilePath);
+        resultImage.writeBMPFile(resultFilePath);
+    }
+
+    //TEST 2
+    {
+        string originalImageFilePath = "flowers.bmp";
+
+        string resultFilePath = "flowers-AddBorder.bmp";
+
+        SimpleImage originalImage(originalImageFilePath);
+        SimpleImage resultImage(1,1);
+
+        BorderedImage borderImage(10, RGB {0,0,0});
+
+        resultImage = borderImage.addBorder(originalImage);
+
+        resultImage.writeBMPFile(resultFilePath);
+    }
+
 
     // THIS SHIT WORKS
     // string redImageFilePath = "redImage.bmp";

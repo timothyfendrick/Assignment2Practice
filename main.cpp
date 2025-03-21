@@ -12,6 +12,55 @@ void redImage(string sourceBmpFilePath, string destinationBmpFilePath);
 int main()
 {
 
+    // SimpleImage testImage(10,10);
+    //
+    // Pixel redPix{.rgb{.red = 255, .green = 0, .blue = 0}, .row = -1, .column = -1};
+    //
+    // Pixel greenPix{.rgb{.red = 0, .green = 255, .blue = 0}, .row = -1, .column = -1};
+    //
+    // for(int row = 0; row < testImage.getHeightInRows(); row++) {
+    //     for(int col = 0; col < testImage.getWidthInColumns(); col++) {
+    //         if(col == 4 && row > 2 && row < 8) {
+    //             testImage.setPixel(row, col, greenPix.rgb.red, greenPix.rgb.green, greenPix.rgb.blue);
+    //         }else {
+    //             testImage.setPixel(row, col, redPix.rgb.red, redPix.rgb.green, redPix.rgb.blue);
+    //         }
+    //
+    //     }
+    // }
+    //
+    // testImage.writeBMPFile("redImage-GreenLine.bmp");
+    
+    string oGImageFilePath = "redImage-GreenLine.bmp";
+    string lDID = "resultLD.bmp";
+
+    SimpleImage oGImage(oGImageFilePath); //Original Image Object
+    SimpleImage resImage(1,1); // Result Image Object
+
+    LineDetectedImage image(1,100);
+
+    resImage = image.detectLine(oGImage);
+
+    resImage.writeBMPFile(lDID);
+
+    // SimpleImage img1("C:/Users/timot/OneDrive/Documents/BMP/snail.bmp");
+    //
+    // SimpleImage img2("C:/Users/timot/OneDrive/Documents/BMP/result.bmp");
+    //
+    //
+    //
+    // LineDetectedImage lineDetectionImage(1, 220);
+    //
+    // SimpleImage withLines1 = lineDetectionImage.detectLine(img1);
+    //
+    // withLines1.writeBMPFile("C:/Users/timot/OneDrive/Documents/BMP/result.bmp");
+    //
+    //
+    //
+    // SimpleImage withLines2 = lineDetectionImage.detectLine(img2);
+    //
+    // withLines2.writeBMPFile("/path/to/img2.bmp");
+
 
     //TEST 1
     {
@@ -59,23 +108,7 @@ int main()
     //
     // redImageWB.writeBMPFile(redImageWBFilePath);
 
-    // SimpleImage img1("C:/Users/timot/OneDrive/Documents/BMP/snail.bmp");
-    //
-    // SimpleImage img2("C:/Users/timot/OneDrive/Documents/BMP/result.bmp");
-    //
-    //
-    //
-    // LineDetectedImage lineDetectionImage(1, 220);
-    //
-    // SimpleImage withLines1 = lineDetectionImage.detectLine(img1);
-    //
-    // withLines1.writeBMPFile("C:/Users/timot/OneDrive/Documents/BMP/result.bmp");
-    //
-    //
-    //
-    // SimpleImage withLines2 = lineDetectionImage.detectLine(img2);
-    //
-    // withLines2.writeBMPFile("/path/to/img2.bmp");
+
 
     // string destinationFilePath = "snail.bmp";
     // string filePath = "sample1.bmp";
@@ -88,16 +121,6 @@ int main()
     // borderedImage = newBorderImage.addBorder(originalImage);
     //
     // borderedImage.writeBMPFile(destinationFilePath);
-
-    // SimpleImage testImage(10,10);
-    //
-    // Pixel redPix{.rgb{.red = 255, .green = 0, .blue = 0}, .row = -1, .column = -1};
-    //
-    // for(int row = 0; row < testImage.getHeightInRows(); row++) {
-    //     for(int col = 0; col < testImage.getWidthInColumns(); col++) {
-    //         testImage.setPixel(row, col, redPix.rgb.red, redPix.rgb.green, redPix.rgb.blue);
-    //     }
-    // }
 
     // cout<<"Simple Image Example"<<endl;
     // redImage("C:/Users/timot/OneDrive/Documents/BMP/snail.bmp", "C:/Users/timot/OneDrive/Documents/BMP/result.bmp");

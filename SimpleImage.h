@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+#include <ostream>
 #include <vector>
 #include <string>
 using namespace std;
@@ -8,6 +10,17 @@ struct RGB
     unsigned char red = 0;
     unsigned char green = 0;
     unsigned char blue = 0;
+    unsigned char rgbV[3]  = {red, green, blue};
+
+    void updateArray() {
+        rgbV[0] = red;
+        rgbV[1] = green;
+        rgbV[2] = blue;
+    }
+
+    void printRGB() {
+        cout << "RGB: " << (int) (red) << ", " << (int) (green) << ", " << (int) (blue) << endl;
+    }
 };
 
 struct Pixel
@@ -15,6 +28,11 @@ struct Pixel
     RGB rgb;
     int row = -1;
     int column = -1;
+
+    void printPixel() {
+        cout << "Row: " << row << " Column: " << column << " ";
+        rgb.printRGB();
+    }
 };
 
 class SimpleImage

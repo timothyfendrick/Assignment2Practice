@@ -32,6 +32,8 @@ public:
 
 private:
 
+    void createGrid(vector <vector <Pixel>> &pixelGrid, SimpleImage &image, int row, int col);
+    void findOpposite(int &cRow, int &cCol);
     int radius;
 
     int detectionThreshold;

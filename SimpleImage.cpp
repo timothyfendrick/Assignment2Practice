@@ -264,6 +264,7 @@ void SimpleImage::readBMPFile(string bmpFilePath)
                     rgb.blue = (unsigned char) pixelData[pixelDataIndex];
                     rgb.green = (unsigned char) pixelData[pixelDataIndex + 1];
                     rgb.red = (unsigned char) pixelData[pixelDataIndex + 2];
+                    rgb.updateArray();
 
                     pixels[r][c].rgb = rgb;
                     pixels[r][c].row = r;
